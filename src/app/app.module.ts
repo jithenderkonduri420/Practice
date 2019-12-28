@@ -7,6 +7,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { ErrorInterceptor } from './core/helpers/error.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -14,14 +19,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     RegistrationComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

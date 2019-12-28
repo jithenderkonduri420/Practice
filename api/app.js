@@ -36,6 +36,9 @@ app.use('/api/user', userController);
 var AuthController = require('./controllers/auth/AuthController');
 app.use('/api/auth', AuthController);
 
+var EmployeeController = require('./controllers/employee/EmployeeController');
+app.use('/api/employee', EmployeeController);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

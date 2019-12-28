@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../core/services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +13,7 @@ export class RegistrationComponent implements OnInit {
   submitted = false;
 
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private toastr: ToastrService) {
    }
 
   ngOnInit() {
@@ -28,8 +30,10 @@ export class RegistrationComponent implements OnInit {
     if (this.registerForm.invalid) {
         return;
     }
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    this.userService.create(this.registerForm.value).subscribe(resp => {
+      this.registerForm.reset();
+      this.toastr.success('User Registration Successfully', 'Toastr fun!');
+    });
   }
   onReset() {
     this.submitted = false;
