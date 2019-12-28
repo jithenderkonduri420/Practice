@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 var userController = require('./controllers/user/UserController');
-app.use('/api/users', userController);
+app.use('/api/user', userController);
 
 var AuthController = require('./controllers/auth/AuthController');
 app.use('/api/auth', AuthController);
