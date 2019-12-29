@@ -5,7 +5,11 @@
   "projects": {
     "practice": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "css"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

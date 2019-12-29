@@ -11,6 +11,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { AlertComponent } from './alert/alert.component';
 
 
 
@@ -20,7 +21,8 @@ import { ToastrModule } from 'ngx-toastr';
     RegistrationComponent,
     DashboardComponent,
     LoginComponent,
-    UsersComponent
+    UsersComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
