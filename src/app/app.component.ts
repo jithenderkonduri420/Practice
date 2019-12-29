@@ -7,6 +7,7 @@ import { AuthenticationService } from './core/services/authentication.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+
 })
 export class AppComponent {
   currentUser: User;
