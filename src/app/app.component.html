@@ -1,10 +1,12 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" (click)="logout()">Logout</a>
-  </div>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/add-emp">Add Emp</a>
+        <a class="nav-item nav-link" routerLink="/emp-list">Emp List</a>
+    </div>
+    <a class="nav-item nav-link logout-link" (click)="logout()">Logout</a>
+
 </nav>
 
 <!-- main app container -->
-<app-alert></app-alert>
 <router-outlet></router-outlet>

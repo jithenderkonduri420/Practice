@@ -12,6 +12,8 @@ import { UsersComponent } from './users/users.component';
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { AlertComponent } from './alert/alert.component';
+import { AddEmpComponent } from './add-emp/add-emp.component';
+import { EmpListComponent } from './emp-list/emp-list.component';
 
 
 
@@ -22,7 +24,9 @@ import { AlertComponent } from './alert/alert.component';
     DashboardComponent,
     LoginComponent,
     UsersComponent,
-    AlertComponent
+    AlertComponent,
+    AddEmpComponent,
+    EmpListComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,8 @@ import { UsersComponent } from './users/users.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { LoggedInAuthGuard } from './core/guards/login.guard';
+import { AddEmpComponent } from './add-emp/add-emp.component';
+import { EmpListComponent } from './emp-list/emp-list.component';
 
 export const routes: Routes = [
   {
@@ -31,8 +33,15 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: 'add-emp',
+    component: AddEmpComponent
+  },
+  {
+    path: 'emp-list',
+    component: EmpListComponent
   }
-
 ];
 
 @NgModule({

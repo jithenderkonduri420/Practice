@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-header">
+                <h4>Emp creation</h4>
+            </div>
+            <div class="bg-table" style="padding: 10px;">
+                <form [formGroup]="studentcreateForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Employee Name</label>
+                                <input type="text" class="form-control" placeholder="Emp Name" formControlName="empname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.empname.errors }">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Department</label>
+                                <select formControlName="depatment" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.depatment.errors }">
+                            <option>Depatment</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                        </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="phone" class="form-control" placeholder="Phonenumber" formControlName="Phonenumber" [ngClass]="{ 'is-invalid': submitted && f.Phonenumber.errors }">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="radio">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="male" name="gender" formControlName="male" [ngClass]="{ 'is-invalid': submitted && f.male.errors }">
+                                        <label class="custom-control-label" for="male">Male</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="female" name="gender" checked formControlName="female" [ngClass]="{ 'is-invalid': submitted && f.female.errors }">
+                                        <label class="custom-control-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control" placeholder="Address" formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                        </textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Work Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="wfh" formControlName="wfh" [ngClass]="{ 'is-invalid': submitted && f.wfh.errors }" checked>
+                                    <label class="form-check-label" for="wfh">
+                              WFH
+                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="office" formControlName="office" [ngClass]="{ 'is-invalid': submitted && f.office.errors }">
+                                    <label class="form-check-label" for="office">
+                              Office
+                            </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="others" formControlName="others" [ngClass]="{ 'is-invalid': submitted && f.others.errors }">
+                                    <label class="form-check-label" for="others">
+                              Others
+                            </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn float-right login_btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
