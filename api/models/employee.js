@@ -2,13 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var EmployeeSchema = new Schema({
-  name: String,
-  department: String,
-  address: String,
-  gender: String,
-  phone: Number,
-  worktype: String
+    empname: String,
+    department: String,
+    address: String,
+    gander: String,
+    phonenumber: Number,
+    worktype: String
 });
+
 
 
 // Export the model

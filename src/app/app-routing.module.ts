@@ -8,6 +8,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { LoggedInAuthGuard } from './core/guards/login.guard';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { EditEmpComponent } from './edit-emp/edit-emp.component';
 
 export const routes: Routes = [
   {
@@ -41,6 +42,10 @@ export const routes: Routes = [
   {
     path: 'emp-list',
     component: EmpListComponent
+  },
+  {
+    path: 'edit-emp/:id',
+    component: EditEmpComponent
   }
 ];
 

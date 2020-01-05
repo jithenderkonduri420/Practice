@@ -6,7 +6,6 @@ import { first } from 'rxjs/operators';
 import { AlertService } from '../core/services/alert.service';
 import { AuthenticationService } from '../core/services/authentication.service';
 
-@Component({ templateUrl: 'login.component.html' })
 @Component({
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.scss']

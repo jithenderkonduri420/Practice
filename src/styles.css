@@ -123,3 +123,8 @@ input:focus {
     margin-right: 10px;
     margin-top: 5px;
 }
+
+.req-message {
+    color: red;
+    font-size: 12px;
+}

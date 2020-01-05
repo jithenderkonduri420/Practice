@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AlertComponent } from './alert/alert.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { EditEmpComponent } from './edit-emp/edit-emp.component';
 
 
 
@@ -26,7 +27,8 @@ import { EmpListComponent } from './emp-list/emp-list.component';
     UsersComponent,
     AlertComponent,
     AddEmpComponent,
-    EmpListComponent
+    EmpListComponent,
+    EditEmpComponent
   ],
   imports: [
     BrowserModule,
